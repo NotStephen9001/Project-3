@@ -1,4 +1,4 @@
-
+### Playing with a few diferent summarization models for the time being, nothing here is set in stone
 
 # Function to summarize text
 def summarize_text(text, model="facebook/bart-large-cnn"):
