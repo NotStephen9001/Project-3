@@ -1,3 +1,5 @@
+# WORKING COPY
+
 # Project 3, Group 5
 ## Participants:
 Marnie Brannon - https://github.com/QueenofParts?tab=repositories
@@ -40,6 +42,25 @@ We were looking for a dataset that is free, easy to access, sufficently large to
 We considered a few but settled on News.org API which provides news from 170 countries. We are aware that we will probably be unable to 
 We used Gradio to build an interface with the user. 
 We then chose ______, a translator to translate the search results and a _______ model to provide a short summary of each of the articles.
+
+o Data fetching;
+
+o Data exploration;
+
+o Data transformation;
+
+o Data analysis;
+
+o Data cleaning and preprocessing
+
+o Testing ML models;
+
+o Integrate AI tools into the project for deployment
+
+o Creating documentation; and
+
+o Creating the presentation.
+
 
 
 ## Using _______:
