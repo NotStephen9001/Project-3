@@ -10,15 +10,18 @@ Katie Kaffenbarger - https://github.com/katiekaff
 
 Anthony Senatore - 
 
+
 ## Our Project:
-(please see the final section of this readme for assignment details)
+Please see the final section of this readme for assignment details.
 
-We are solving the problem of diminished access to varied news media due to the limitations of language and media market.
+# Goal:
+Our goal in this project is to offer a more user-friendly option to access worldwide news.
 
-## Description:
+## Problem:
+We know users can use common search engines for this, however many translators don’t work well and search engines are often clunky in an unfamiliar language.  We have all wondered from time to time how the foreign press view our domestic politics, events, culture or local stories, and which they get attention outside of the USA, and where?  Maybe you’re interested in learning how an international story is being covered in its own locality?   
 
-Users can use the internet however many translators don’t work well and search engines are often clunky in an unfamiliar language.  We have all wondered from time to time how the foreign press view our politics, events or other stories, and which, if any, stories get attention outside of the USA, and where?  Maybe you’re interested in learning how an international story is being covered in its own locality. Our goal in this project is to offer a more user-friendly option to access worldwide news.  
-## Goal:
+## Proposal:
+We are solving the problem of diminished access to varied news media due to the limitations of language and media market. We propose using a worldwide news API to provide articles which we will translate to a selected group of languages and then summarize them down to about two lines of text as a preview.  The idea here being that the user can provide a topic or keyword and search for news stories from around the world, rather than being limited to their own language and market.
 
 ### This is the activity flow we envision:
 
@@ -30,18 +33,24 @@ Users can use the internet however many translators don’t work well and search
 6.	Prompt the user to search again or thank them for using ______.
 
 ## Methodology:
-This is how we did each of these:
-We used the News.org API which provides news from 170 countries as our source.
-We then chose Gradio to build an interface with the user.
+This is how we solved the problem:
+
+## Choosing a dataset:
+We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently.
+We considered a few but settled on News.org API which provides news from 170 countries. We are aware that we will probably be unable to 
+We used Gradio to build an interface with the user. 
 We then chose ______, a translator to translate the search results and a _______ model to provide a short summary of each of the articles.
+
 
 ## Using _______:
 Run this algorithm on PC or Mac
+
 ## Installation:
 pip install python
 pip install json
 pip install newsapi-python 
 pip install gradio
+
 ## Problems Encountered:
 
 ### Problem:
@@ -58,13 +67,15 @@ Simon Kingaby recommended we use _____ as a translator.
 
 ## How we chose this topic:
 
+   __________________________________________________________________________
+   
 ## Assignment Details:
 For the Final Project, you will work with your group to collaboratively solve or analyze a problem using advanced ML methodologies. In your solution, you will incorporate transformer models, natural language processing (NLP) techniques, and other tools acquired throughout the course, in addition to at least one new technology that we haven’t covered together.
 
 # Here are the specific requirements:
 1.	Identify a problem worth solving or analyzing.
 2.	Find a dataset or datasets that are sufficiently large enough to effectively train a ML model or neural network with a high degree of accuracy to ensure that your results are reliable.
-3. 	Evaluate the trained model(s) using testing data. Include any calculations, metrics, or visualizations needed to evaluate the performance.
+3. Evaluate the trained model(s) using testing data. Include any calculations, metrics, or visualizations needed to evaluate the performance.
 4.	You must use at least two of the following:
    
   •	scikit-learn
@@ -258,11 +269,9 @@ IMPORTANT:
 Whenever you use a dataset or create a new dataset based on other sources (such as existing datasets or information scraped from websites), make sure to use the following guidelines:
 
 1.	Check for copyright protections, and make sure that the way you plan to use this dataset is within the bounds of fair use.
-2.	
-3.	Document how you intend to use this dataset now and in the future. Find any licenses or terms of use associated with the dataset, and review them to confirm that your intended use is in compliance.
-4.	
-5.	Investigate how the dataset was collected. Identify any indicators that the data was obtained from a source that the compilers were not authorized to access.
-6.	You’ll likely have to adjust your project plan as you explore the available data. That’s okay! This is all part of the process. Just make sure that everyone in the group is aligned on the project’s goals as you make changes.
+2.	Document how you intend to use this dataset now and in the future. Find any licenses or terms of use associated with the dataset, and review them to confirm that your intended use is in compliance.
+3.	Investigate how the dataset was collected. Identify any indicators that the data was obtained from a source that the compilers were not authorized to access.
+4.	You’ll likely have to adjust your project plan as you explore the available data. That’s okay! This is all part of the process. Just make sure that everyone in the group is aligned on the project’s goals as you make changes.
 
 Make sure that your datasets are not too large for your personal computer. Big datasets are difficult to manage locally, so consider using data subsets or different datasets altogether.
 
