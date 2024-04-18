@@ -32,6 +32,7 @@ def CreateArticleList(top_headlines):
     #Get News Articles
     articles = top_headlines['articles']
 
+    
     #Get Article Titles
     titles = [article['title'] for article in articles]
 
@@ -81,4 +82,23 @@ def CreateArticleList(top_headlines):
         }
 
     return articles
+
+
+def DisplayTranslatedArticle(translated_article):
+    #Display the translated article title and content
+    print("Translated Article:" + "\n\n")
+    print(f"Translated Title: {translated_article[0]['title']}\n")
+    print(f"  Author: {translated_article[0]['author']}\n")
+    print(f"  Description: {translated_article[0]['description']}\n")
+    print(f"  Content: {translated_article[0]['content']}\n")
+    print(f"  URL: {translated_article[0]['url']}\n")
+    print(f"  Source: {translated_article[0]['source']}\n")
+    print(f"  Published Date: {translated_article[0]['published_date']}\n")
+    print(f"  Image: {translated_article[0]['image']}\n")
+    print(f"  Sentiment: {translated_article[0]['sentiment']}\n")
+    print(f"  Keywords: {translated_article[0]['keywords']}\n")
+    print("\n")
+
+    
+    return None
     
