@@ -4,7 +4,7 @@
 ## Participants:
 Marnie Brannon - https://github.com/QueenofParts?tab=repositories
 
-Joseph Erste - 
+Joseph Erste -  https://github.com/northcoastbuzz
 
 Stephen Haldi - https://github.com/NotStephen9001
 
@@ -41,13 +41,13 @@ This is how we solved the problem:
 We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently.
 We considered a few but settled on News.org API which provides news from 170 countries. We are aware that we will probably be unable to 
 We used Gradio to build an interface with the user. 
-We then chose ______, a translator to translate the search results and a _______ model to provide a short summary of each of the articles.
+We then chose Aya, a translator though we had considered Deep Translator. _______ a model to provide a short summary of each of the articles.
 
 o Data fetching;
 
-o Data exploration;
+o Data exploration; 
 
-o Data transformation;
+o Data transformation; Hugging Face
 
 o Data analysis;
 
@@ -61,7 +61,8 @@ o Creating documentation; and
 
 o Creating the presentation.
 
-
+Two tools we used that were covered in class:  
+One tool that we used that was not covered in class:
 
 ## Using _______:
 Run this algorithm on PC or Mac
@@ -82,7 +83,7 @@ pip install gradio
 ## Additional help and resources:
 ### Advisors: 
 Alexander Vargas gave us much needed advice on the practicality (or rather advisability) of tackling the projects we had in mind.
-Simon Kingaby recommended we use _____ as a translator.
+Simon Kingaby recommended we use Aya, from Cohere for translation.
 
 ### Sources:
 
