@@ -4,6 +4,7 @@ import os
 import sys
 
 from transformers import pipeline, AutoTokenizer
+from langdetect import detect
 from dotenv import load_dotenv
 from newsapi import NewsApiClient
 

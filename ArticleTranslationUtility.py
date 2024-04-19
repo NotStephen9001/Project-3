@@ -1,6 +1,7 @@
 from transformers import AutoTokenizer, TFAutoModelForSeq2SeqLM, MBartForConditionalGeneration, MBart50TokenizerFast
 from dotenv import load_dotenv
 from newsapi import NewsApiClient
+from langdetect import detect
 
 
 
@@ -27,6 +28,13 @@ def SelectArticleToTranslate(articles):
 def TranslateArticle(articles, languageCode, articleNumber):
 
     print("Translating Article...")
+
+    #if LanguageCode is None, detect the language of the article
+    if languageCode == None or languageCode == "" or languageCode == "None":
+        languageCode = detect(articles[articleNumber - 1]['title'])
+        
+    print("Detected Language: " + languageCode)
+    
 
     #Translate the article to English if it is not already in English
     
@@ -66,6 +74,7 @@ def TranslateArticle(articles, languageCode, articleNumber):
 
     else:
         print("Article is already in English")
+        translated_article = article
     
 
     

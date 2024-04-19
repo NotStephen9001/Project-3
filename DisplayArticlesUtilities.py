@@ -1,4 +1,5 @@
 
+
 from transformers import pipeline, AutoTokenizer
 
 #Pass in a list of dictionary of articles and display the information in a formatted list
