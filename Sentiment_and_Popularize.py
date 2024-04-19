@@ -26,7 +26,7 @@ sentiment_analyzer = pipeline('sentiment-analysis', model=sentiment_model)
 summarizer = pipeline('summarization', model=summarization_model)
 
 def get_top_headlines(query=None, country=None, language=None):
-    """Fetch top headlines based on provided criteria."""
+    # Fetch top headlines based on provided criteria.
     try:
         date_today = datetime.datetime.now()
         date_two_days_ago = date_today - datetime.timedelta(days=2)
@@ -37,7 +37,7 @@ def get_top_headlines(query=None, country=None, language=None):
         return []
 
 def preprocess_text(articles):
-    """Preprocess article content for LDA and NER."""
+    # Preprocess article content
     texts = []
     for article in articles:
         if article['content']:
@@ -48,7 +48,7 @@ def preprocess_text(articles):
     return texts
 
 def perform_lda(texts):
-    """Perform LDA to identify main topics in the articles."""
+    # Perform LDA to identify main topics in the articles.
     try:
         dictionary = corpora.Dictionary(texts)
         corpus = [dictionary.doc2bow(text) for text in texts]
@@ -61,7 +61,7 @@ def perform_lda(texts):
         return []
 
 def extract_entities(articles):
-    """Extract key entities from articles using NER."""
+    # Extract key entities from articles using NER.
     entities = []
     for article in articles:
         if article['content']:
@@ -70,7 +70,7 @@ def extract_entities(articles):
     return entities
 
 def display_articles(articles):
-    """Displays articles with enhanced information including sentiment and summaries."""
+    # Displays articles including sentiment and summaries.
     for i, article in enumerate(articles, start=1):
         summary = "No summary available."
         sentiment = {'label': 'Neutral', 'score': 0}
@@ -92,7 +92,7 @@ def display_articles(articles):
         print("\n")
 
 def main():
-    """Main function to manage the workflow with improved user interaction."""
+    # Main Function
     try:
         while True:
             print("1. Search Articles\n2. Exit")
