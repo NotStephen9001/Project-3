@@ -114,7 +114,7 @@ For the Final Project, you will work with your group to collaboratively solve or
   
   •	OpenAI
   
-6.	You must use one additional library or technology NOT covered in class, such as:
+5.	You must use one additional library or technology NOT covered in class, such as:
 
   •	Valence Aware Dictionary for Sentiment Reasoning (VADER)
   
