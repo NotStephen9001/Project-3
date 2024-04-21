@@ -1,6 +1,6 @@
 from transformers import AutoTokenizer, TFAutoModelForSeq2SeqLM, MBartForConditionalGeneration, MBart50TokenizerFast
 from dotenv import load_dotenv
-from newsapi import NewsApiClient
+#from newsapi import NewsApiClient
 from langdetect import detect
 
 

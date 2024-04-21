@@ -6,7 +6,7 @@ import sys
 from transformers import pipeline, AutoTokenizer
 from langdetect import detect
 from dotenv import load_dotenv
-from newsapi import NewsApiClient
+#from newsapi import NewsApiClient
 
 def get_article_data(country = None, language = None, query = None):
     load_dotenv()
@@ -50,29 +50,29 @@ if __name__ == "__main__":
 
 
 
-#Create the function to pull the article data passing in country and language
-def get_top_headlines(country = None, language = None, query = None):
+# #Create the function to pull the article data passing in country and language
+# def get_top_headlines(country = None, language = None, query = None):
     
-    #Load the API key from the .env file
-    load_dotenv()
-    news_api_key = os.environ.get('NewsAPIKey2')
-    wrld_news_api_key = os.environ.get('WrldNewsAPIKey')
+#     #Load the API key from the .env file
+#     load_dotenv()
+#     news_api_key = os.environ.get('NewsAPIKey2')
+#     wrld_news_api_key = os.environ.get('WrldNewsAPIKey')
     
-    #Create the NewsApiClient object
-    newsapi = NewsApiClient(news_api_key)
+#     #Create the NewsApiClient object
+#     newsapi = NewsApiClient(news_api_key)
     
-    #Get the top headlines from the country and language
-    if country == None and language == None:
-        top_headlines = newsapi.get_top_headlines(q=query)
-    elif country == None:
-        top_headlines = newsapi.get_top_headlines(q=query,language=language)
-    elif language == None:
-        top_headlines = newsapi.get_top_headlines(q=query,country=country)
-    else:
-        top_headlines = newsapi.get_top_headlines(q=query,country=country, language=language)
+#     #Get the top headlines from the country and language
+#     if country == None and language == None:
+#         top_headlines = newsapi.get_top_headlines(q=query)
+#     elif country == None:
+#         top_headlines = newsapi.get_top_headlines(q=query,language=language)
+#     elif language == None:
+#         top_headlines = newsapi.get_top_headlines(q=query,country=country)
+#     else:
+#         top_headlines = newsapi.get_top_headlines(q=query,country=country, language=language)
     
-    #Return the top headlines
-    return top_headlines
+#     #Return the top headlines
+#     return top_headlines
 
 
 
