@@ -73,7 +73,7 @@ This utility extracts article sentiment and/or popularity information from the A
 This application run on PC or Mac.
 
 ### Installation
-
+ 
 #### Create New Python Environment
 
 ```text
@@ -96,7 +96,7 @@ conda activate Project3
 
 #### Execution
 
-1. Open the Jupyter Noteook: main.ipynb
+Open the Jupyter Noteook: main.ipynb
 
 ## Issues Encountered
 
@@ -112,12 +112,14 @@ We consulted our tutors and profassor, did searches and after examination and te
 
 ### Resolution 2
 
-## Wish List
+## Next Steps and Future Considerations
 
-What wouls we do if we had more time?
+What would we do if we had more time?
 
-- Translate into more languages
-- add more news APIs to improve coverage
+1. Utilize AI to categorize, summarize, and present trending topics from news articles around the world.
+2. Categorize results displayed into recent and older articles.
+3. Additional news APIs 
+4. Additional languages for translation.
 
 ## Additional Help and Resources
 
