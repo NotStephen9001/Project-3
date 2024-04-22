@@ -1,29 +1,35 @@
-import gradio as gr
-import requests
-import spacy
-import numpy as np
-from dotenv import load_dotenv
-import os
+import  gradio      as gr
+import  numpy       as np
+import  os
+import  requests
+import  spacy
+
+import DisplayArticlesUtilities     as DAU
+
+from    dotenv      import load_dotenv
+
 
 # Load the medium-sized spaCy model with vectors
-nlp = spacy.load('en_core_web_md')
+nlp = spacy.load('en_core_web_sm')
 
 # Load environment variables from the .env file
 load_dotenv()
 
 # Function to fetch articles from World News API
 def fetch_articles_from_api(query):
-    url = "https://api.worldnewsapi.com/search-news"
-    api_key = os.getenv('WrldNewsAPIKey')
-    headers = {'x-api-key': api_key}
-    params = {'text': query}
-    response = requests.get(url, headers=headers, params=params)
+    url         = "https://api.worldnewsapi.com/search-news"
+    api_key     = os.getenv('WrldNewsAPIKey')
+    headers     = {'x-api-key': api_key}
+    params      = {'text': query}
+    response    = requests.get(url, headers=headers, params=params)
     
     if response.status_code == 200:
         response_data = response.json()
         
         if 'news' in response_data and response_data['news']:
-            return response_data['news']
+            #return response_data['news']
+            return DAU.CreateArticleList(response_data)
+        
         else:
             return []
     else:
@@ -51,7 +57,7 @@ def get_article_recommendations(query):
     if not articles:
         return "No articles found for the given query."
     
-    article_texts = [article['text'] for article in articles if 'text' in article]
+    article_texts = [article['content'] for article in articles if 'content' in article]
     
     if not article_texts:
         return "No content available in the fetched articles."
@@ -65,7 +71,11 @@ def get_article_recommendations(query):
         current_article_index = 0
         recommended_indices = recommend_articles(embeddings[current_article_index], embeddings)
         # Return recommended article titles
-        return '\n'.join([articles[index]['title'] for index in recommended_indices])
+        #return '\n'.join([articles[index]['content'] for index in recommended_indices])
+        
+        article_texts["embeddings"] = embeddings
+        return article_texts
+        
     except IndexError as e:
         return f"Index error: {e}"
 
