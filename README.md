@@ -1,198 +1,196 @@
-# WORKING COPY
+# Project 3, Group 5 : AI Enhanced News Search Utility
 
-# Project 3, Group 5
-## Participants:
-Marnie Brannon - https://github.com/QueenofParts?tab=repositories
+## Participants
 
-Joseph Erste -  https://github.com/northcoastbuzz
+- [Marnie Brannon](https://github.com/QueenofParts)
+- [Joseph Erste](https://github.com/northcoastbuzz)
+- [Stephen Haldi](https://github.com/NotStephen9001)
+- [Katie Kaffenbarger](https://github.com/katiekaff)
+- [Craig Senatore](https://github.com/acraigsen)
 
-Stephen Haldi - https://github.com/NotStephen9001
+## Our Project
 
-Katie Kaffenbarger - https://github.com/katiekaff
-
-Anthony Senatore - 
-
-
-## Our Project:
 Please see the final section of this readme for assignment details.
 
-# Goal:
+## Goal
+
 Our goal in this project is to offer a more user-friendly option to access worldwide news.
 
-## Problem:
-We know users can use common search engines for this, however many translators don’t work well and search engines are often clunky in an unfamiliar language.  We have all wondered from time to time how the foreign press view our domestic politics, events, culture or local stories, and which they get attention outside of the USA, and where?  Maybe you’re interested in learning how an international story is being covered in its own locality?   
+## Problem
 
-## Proposal:
+We know users can use common search engines for this, however many translators don’t work well and search engines are often clunky in an unfamiliar language.  We have all wondered from time to time how the foreign press view our domestic politics, events, culture or local stories, and which they get attention outside of the USA, and where?  Maybe you’re interested in learning how an international story is being covered in its own locality?
+
+## Proposal
+
 We are solving the problem of diminished access to varied news media due to the limitations of language and media market. We propose using a worldwide news API to provide articles which we will translate to a selected group of languages and then summarize them down to about two lines of text as a preview.  The idea here being that the user can provide a topic or keyword and search for news stories from around the world, rather than being limited to their own language and market.
 
-### This is the activity flow we envision:
+This is the activity flow we envision:
 
-1.	Welcome the user.
-2.	Have user enter a keyword or topic to search.
-3.	Pick a Nation or Language from a drop-down list.
-4.	Show a selection of articles with brief summaries.
-5.	Remind the user they are able to click on and read any article of their choice.
-6.	Prompt the user to search again or thank them for using ______.
+1. Welcome the user
+2. Have user enter a keyword or topic to search
+3. Pick a Nation or Language from a drop-down list
+4. Show a selection of articles with brief summaries
+5. Remind the user they are able to select and read any article of their choice
 
-## Methodology:
+
+## Methodology
+
 This is how we solved the problem:
 
-## Choosing a dataset:
+## Choosing a Dataset
+
 We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently.
 We considered a few but settled on News.org API which provides news from 170 countries. We are aware that we will probably be unable to 
 We used Gradio to build an interface with the user. 
 We then chose Aya, a translator though we had considered Deep Translator. _______ a model to provide a short summary of each of the articles.
 
-o Data fetching;
-
-o Data exploration; 
-
-o Data transformation; Hugging Face
-
-o Data analysis;
-
-o Data cleaning and preprocessing
-
-o Testing ML models;
-
-o Integrate AI tools into the project for deployment
-
-o Creating documentation; and
-
-o Creating the presentation.
+- Data fetching
+- Data exploration
+- Data transformation; Hugging Face
+- Data analysis
+- Data cleaning and preprocessing
+- Testing ML models
+- Integrate AI tools into the project for deployment
+- Creating documentation
+- Creating the presentation
 
 Two tools we used that were covered in class:  
 One tool that we used that was not covered in class:
 
-## Using _______:
-Run this algorithm on PC or Mac
 
-## Installation:
-pip install python
-pip install json
-pip install newsapi-python 
-pip install gradio
+## Installation
 
-## Problems Encountered:
+### Create New Python Environment
 
-### Problem:
-### Solve:
-### Problem: 
-### Solve:
+```text
+conda create --name Project3 python=3.12
+conda activate Project3
+```
 
-## Additional help and resources:
-### Advisors: 
-Alexander Vargas gave us much needed advice on the practicality (or rather advisability) of tackling the projects we had in mind.
-Simon Kingaby recommended we use Aya, from Cohere for translation.
+### Install Packages
+| Package | Conda Install | PIP Install |
+| ----------- | ----------- | ----------- |
+| Jupyter Lab               | `conda install -c conda-forge jupyterlab` | `pip install jupyterlab` |
+| python-dotenv             | `conda install conda-forge::python-dotenv`| `pip install python-dotenv`|
+| jsons                     | `conda install -c conda-forge jsons`      | `pip install json`  |
+| Pandas                    | `conda install pandas`                    | `pip install pandas` |
+| Gradio                    | `conda install conda-forge::gradio`       | `pip install gradio`|
+| Google Language Detection | `conda install conda-forge::langdetect`   | `pip install langdetect` |
+| Hugging Face Transformers | `conda install conda-forge::transformers`<br />`conda install conda-forge::sentence-transformers`<br />  | `pip install transformers`<br />`pip install sentence-transformers`<br />`pip install transformers sentencepiece`|
 
-### Sources:
+## Running the Application
 
-## How we chose this topic:
+This application run on PC or Mac.
+
+1. Open the Jupyter Noteook: main.ipynb
+
+## Issues Encountered
+
+### Issue 1
+
+### Resolution
+
+### Issue 2
+
+### Resolution
+
+
+## Additional Help and Resources
+
+### Advisors
+
+- Alexander Vargas
+  - Gave us much needed advice on the practicality (or rather advisability) of tackling the projects we had in mind
+- Simon Kingaby
+  - recommended we use Aya, from Cohere for translation
+
+### Sources
+
+- ChatGPT
+  - Provided recommendations for Gradio interface implementation
+  - Assisted with general debugging of Python code
+
+## How We Chose This topic
+
+<br />
+<br />
+<br />
+<br />
 
    __________________________________________________________________________
    
-## Assignment Details:
+## Assignment Details
 For the Final Project, you will work with your group to collaboratively solve or analyze a problem using advanced ML methodologies. In your solution, you will incorporate transformer models, natural language processing (NLP) techniques, and other tools acquired throughout the course, in addition to at least one new technology that we haven’t covered together.
 
-# Here are the specific requirements:
-1.	Identify a problem worth solving or analyzing.
-2.	Find a dataset or datasets that are sufficiently large enough to effectively train a ML model or neural network with a high degree of accuracy to ensure that your results are reliable.
+# Here are the specific requirements
+
+1. Identify a problem worth solving or analyzing.
+2. Find a dataset or datasets that are sufficiently large enough to effectively train a ML model or neural network with a high degree of accuracy to ensure that your results are reliable.
 3. Evaluate the trained model(s) using testing data. Include any calculations, metrics, or visualizations needed to evaluate the performance.
-4.	You must use at least two of the following:
-   
-  •	scikit-learn
-  
-  •	Keras
-  
-  •	TensorFlow
-  
-  •	Hugging Face
-  
-  •	spaCy or Natural Language Toolkit (NLTK)
-  
-  •	LangChain
-  
-  •	OpenAI
-  
-5.	You must use one additional library or technology NOT covered in class, such as:
+4. You must use at least two of the following:
+    - [ ] scikit-learn
+    - [ ] Keras
+    - [ ] TensorFlow
+    - [x] Hugging Face
+    - [x] spaCy or Natural Language Toolkit (NLTK)
+    - [ ] LangChain
+    - [ ] OpenAI
 
-  •	Valence Aware Dictionary for Sentiment Reasoning (VADER)
-  
-  •	Whisper (OpenAI’s automatic speech recognition system)
-  
-  •	DALL·E (OpenAI’s text-to-image model)
-  
-  •	Other OpenAI capabilities, including:
-  
-  o	Text-to-speech
-  
-  o	GPT-4 with vision (GPT-4V)
-  
-  •	PyTorch
+5. You must use one additional library or technology NOT covered in class, such as:
+    - Valence Aware Dictionary for Sentiment Reasoning (VADER)
+    - Whisper (OpenAI’s automatic speech recognition system)
+    - DALL·E (OpenAI’s text-to-image model)  
+    - Other OpenAI capabilities, including:
+        - Text-to-speech
+        - GPT-4 with vision (GPT-4V)
+    - PyTorch
+    - langdetect
 
-# For this project, you can focus your efforts within a specific industry, as detailed in the following examples:
-
+  
+# For this project, you can focus your efforts within a specific industry, as detailed in the following examples
 Finance:
 
-•	Build a customer service chatbot for a financial firm that analyzes a user’s request and makes customized recommendations in one or more languages.
-
-•	Develop a deep learning model that forecasts and predicts stock prices for at least three publicly traded companies.
-
-•	Use NLP, transformers, or OpenAI to summarize key takeaways from a company’s earnings call.
+- Build a customer service chatbot for a financial firm that analyzes a user’s request and makes customized recommendations in one or more languages.
+- Develop a deep learning model that forecasts and predicts stock prices for at least three publicly traded companies.
+- Use NLP, transformers, or OpenAI to summarize key takeaways from a company’s earnings call.
 
 Healthcare:
 
-•	Build a transformer model that captions medical images in one or more languages.
+- Build a transformer model that captions medical images in one or more languages.
+- Develop a deep learning model to distinguish between malignant and benign moles.
+- Use NLP to de-identify medical data such as name, birthdate, and ID number.
 
-•	Develop a deep learning model to distinguish between malignant and benign moles.
-
-•	Use NLP to de-identify medical data such as name, birthdate, and ID number.
-
-# Custom:
+# Custom
 
 We’ve only specified healthcare and finance, but any industry can benefit from applying NLP, transformers, or OpenAI technologies. Consider preparing a data deep dive or infrastructure review that shows ML in the context of what we’ve already learned.
 
-•	Develop an integrated AI model that accurately detects and filters out spam messages.
+-	Develop an integrated AI model that accurately detects and filters out spam messages.
+-	Use NLP to analyze social media data or customer reviews to understand user sentiment about a product, service, or issue.
+-	Develop a transformer model that translates between two or more languages of your choice.
 
-•	Use NLP to analyze social media data or customer reviews to understand user sentiment about a product, service, or issue.
-
-•	Develop a transformer model that translates between two or more languages of your choice.
-
-# Working with Your Group:
+# Working with Your Group
 
 When working on an online group project, it’s crucial to meet with your group and communicate regularly. Plan for significant collaboration time outside of class. The following tips can help you make the most of your time:
 
-•	Decide how you’re going to communicate with your group members when you begin. Create a Slack channel, exchange phone numbers, and ensure that the group knows each group member’s available working hours.
-
-•	Set up an agile project by using GitHub ProjectsLinks to an external site. so that your group can track tasks.
-
-•	Create internal milestones to ensure that your group is on track. Set due dates for these milestones so that you have a timeline for completing the project. Some of these milestones might include:
-
-o	Project ideation;
-
-o	Data fetching;
-
-o	Data exploration;
-
-o	Data transformation;
-
-o	Data analysis;
-
-o	Data cleaning and preprocessing
-
-o	Testing ML models;
-
-o	Integrate AI tools into the project for deployment
-
-o	Creating documentation; and
-
-o	Creating the presentation.
+- Decide how you’re going to communicate with your group members when you begin. Create a Slack channel, exchange phone numbers, and ensure that the group knows each group member’s available working hours.
+- Set up an agile project by using GitHub ProjectsLinks to an external site. so that your group can track tasks.
+- Create internal milestones to ensure that your group is on track. Set due dates for these milestones so that you have a timeline for completing the project. Some of these milestones might include:
+  - Project ideation
+  - Data fetching
+  - Data exploration
+  - Data transformation
+  - Data analysis
+  - Data cleaning and preprocessing
+  - Testing ML models
+  - Integrate AI tools into the project for deployment
+  - Creating documentation
+  - Creating the presentation
 
 Since this is a two-week project, make sure that you have completed at least half of your project by the end of the first week in order to stay on track.
 
 Although you will divide the work among the group members, it’s essential to collaborate and communicate while working on different parts of the project. Be sure to check in with your teammates regularly and offer support.
 
-# Support and Resources:
+# Support and Resources
 
 Your instructional team will provide support during classes and office hours. You will also have access to learning assistants and tutors to help you with topics as needed. Make sure to take advantage of these resources as you collaborate with your group on this project.
 
