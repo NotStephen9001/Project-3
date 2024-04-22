@@ -126,10 +126,9 @@ We had a few false starts with translators. These are often hard to choose becau
 We consulted our tutors and profassor, did searches and after examination and testing of several options we decided on the Microsoft Translator API. We selected Deep Tranlator (PyPi) initially but found it to not meet our needs once we started. Simon recommended AYA as a solution but we found it also did not meet our needs and  we could not find any API documentation and we noted that it appeared to not be ready for general use yet.
 
 ### Sentiment Analysis Implementation
-
-
-
-### Resolution 2
+We had problems with faetching the sentiment analtsis from the worl news API.  They were providing some type of numerical analysis, we tried to turn it into some sort of text but could not achieve this after 15+ hours.
+### Resolution 
+Instead we used the Spacy natural Language processor to give us small summaries based on the text of each article.
 
 
 
