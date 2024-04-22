@@ -1,3 +1,4 @@
+import gradio as gr
 import requests
 import spacy
 import numpy as np
@@ -20,17 +21,12 @@ def fetch_articles_from_api(query):
     
     if response.status_code == 200:
         response_data = response.json()
-        print(response_data.keys())
         
         if 'news' in response_data and response_data['news']:
-            # Log the first article to check its structure
-            print("First article in response:", response_data['news'][0])
             return response_data['news']
         else:
-            print("The 'news' key is empty or not present in the response.")
             return []
     else:
-        print(response.text)
         raise Exception(f"World News API Error: {response.status_code}")
 
 # Function to generate embeddings using spaCy
@@ -50,38 +46,42 @@ def recommend_articles(target_article_embedding, all_article_embeddings):
 
 # Main function to get recommendations
 def get_article_recommendations(query):
-    # Fetch articles from the API using the query
     articles = fetch_articles_from_api(query)
     
     if not articles:
-        print("No articles found for the given query.")
-        return
-
-    # Extract text content from articles
+        return "No articles found for the given query."
+    
     article_texts = [article['text'] for article in articles if 'text' in article]
     
     if not article_texts:
-        print("No content available in the fetched articles.")
-        return
-
-    # Generate embeddings for each article
+        return "No content available in the fetched articles."
+    
     embeddings = get_spacy_embeddings(article_texts)
     
     if not embeddings:
-        print("Could not generate embeddings from the articles.")
-        return
+        return "Could not generate embeddings from the articles."
     
     try:
-        # Assume the first article is the target for recommendations
         current_article_index = 0
         recommended_indices = recommend_articles(embeddings[current_article_index], embeddings)
-        
-        # Print recommended articles
-        for index in recommended_indices:
-            print(articles[index]['title'])
+        # Return recommended article titles
+        return '\n'.join([articles[index]['title'] for index in recommended_indices])
     except IndexError as e:
-        print(f"Index error: {e}")
+        return f"Index error: {e}"
 
-# Use the query to get recommendations
-query = 'latest news'
-get_article_recommendations(query)
+# Gradio UI Elements
+text_keyword = gr.Textbox(
+    label="Search Term",
+    placeholder="Enter your search term here"
+)
+
+text_results = gr.TextArea(label="Results")
+
+# Gradio App Interface
+app = gr.Interface(
+    fn=get_article_recommendations,  # Hook up the article recommendation function
+    inputs=text_keyword,            # Assuming you only need the keyword for now
+    outputs=text_results            # Output the results in a TextArea
+)
+
+app.launch(show_error=True)
