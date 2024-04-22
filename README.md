@@ -39,24 +39,28 @@ This is how we solved the problem:
 
 ## Choosing a Dataset
 
-We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently.
-We considered a few but settled on News.org API which provides news from 170 countries. We are aware that we will probably be unable to 
-We used Gradio to build an interface with the user. 
-We then chose Aya, a translator though we had considered Deep Translator. _______ a model to provide a short summary of each of the articles.
+We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently. We started with News.org API which provides news from 170 countries. 
 
-- Data fetching
-- Data exploration
-- Data transformation; Hugging Face
-- Data analysis
-- Data cleaning and preprocessing
-- Testing ML models
-- Integrate AI tools into the project for deployment
-- Creating documentation
-- Creating the presentation
+## Data fetching and data exploration
+As we used and came to better understand the News.org API, we realised it would be better to use World Nwes API instead. This is because ______.
 
-Two tools we used that were covered in class:  
-One tool that we used that was not covered in class:
+## Data transformation
+For data transformation we chose to use Hugging Face. This was because we were already familiar with it from class and because it was well suited to the goals of this project.
 
+## Data analysis
+Data analysis was done using _____. 
+
+## Data cleaning and preprocessing
+
+## Testing ML models 
+
+## Integrate AI tools into the project for deployment
+
+## Creating documentation
+We created the documentation in the form of both the readme and the informational notations with in the code. Both of these were done througout the project, changing and being updated as the project was being completed.
+
+## Creating the presentation
+The presentation was done mostly during the final days of the project to allow us as much time as possible for development and testing prior to developing a script and slides.
 
 ## Installation
 
