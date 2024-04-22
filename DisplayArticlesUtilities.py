@@ -22,7 +22,7 @@ def DisplayArticleInfo(articles):
             print(f"    Published Date: {articles[i]['published_date']}")
             print(f"    Image: {articles[i]['image']}")
             print(f"    Sentiment: {articles[i]['sentiment']}")
-            print(f"    Keywords: {articles[i]['keywords']}")
+            #print(f"    Keywords: {articles[i]['keywords']}")
             print("\n")
     return None
 
@@ -64,8 +64,8 @@ def CreateArticleList(top_headlines):
 
 
     #Get Article Keywords
-    tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
-    keywords = [tokenizer.tokenize(article['text']) for article in articles]
+    # tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+    # keywords = [tokenizer.tokenize(article['text']) for article in articles]
 
     #Combine Article Info into a dictionary
     for i in range(len(articles)):
@@ -78,7 +78,7 @@ def CreateArticleList(top_headlines):
             #'source': sources[i],
             'published_date': published_dates[i],
             'sentiment': sentiments[i],
-            'keywords': keywords[i],
+            #'keywords': keywords[i],
             'image': images[i],
         }
 
@@ -97,7 +97,7 @@ def DisplayTranslatedArticle(translated_article):
     print(f"  Published Date: {translated_article[0]['published_date']}\n")
     print(f"  Image: {translated_article[0]['image']}\n")
     print(f"  Sentiment: {translated_article[0]['sentiment']}\n")
-    print(f"  Keywords: {translated_article[0]['keywords']}\n")
+    #print(f"  Keywords: {translated_article[0]['keywords']}\n")
     print("\n")
 
     
