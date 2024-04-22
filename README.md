@@ -37,30 +37,36 @@ This is the activity flow we envision:
 
 This is how we solved the problem:
 
-## Choosing a Dataset
+### Choose a Dataset
 
-We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently. We started with News.org API which provides news from 170 countries. 
+We were looking for a dataset that is free, easy to access, sufficently large to train a ML model or neural network, yet small enough to not slow us down by being too large to work with efficiently. We started with News.org API which provides news from 170 countries. As we used and came to better understand the News.org API, we realised it would be better to use World Nwes API instead. This is because the first API returned results only in English, and we wanted to find material in other languages both for better coverage for the user and to demonstrate our skills within the assignment.
 
-## Data fetching and data exploration
-As we used and came to better understand the News.org API, we realised it would be better to use World Nwes API instead. This is because ______.
+### AI Enhanced News Search Utility
 
-## Data transformation
-For data transformation we chose to use Hugging Face. This was because we were already familiar with it from class and because it was well suited to the goals of this project.
+This is the main utility, is to interface with the user and unite the other utilities to return a clean, formatted, usable response to the user’s query. The utilities below, as well as pandas, datetime, and transformers functions provide the requested output. 
 
-## Data analysis
-Data analysis was done using _____. 
+### Pull Articles Utility
 
-## Data cleaning and preprocessing
+This utility asks the user to input the country, language, keyword and dates of the articles they are interested in viewing.
 
-## Testing ML models 
+### Article Import Utility 
 
-## Integrate AI tools into the project for deployment
+The purpose of this utility is to fetch article data from the API, including headlines, top headlines, publication date, number of articles, language, and country passing these back to the AI Enhanced News Search Utility. Here we used the parameters provided by the user to pull the correct data creating a list of articles for each country and language.
 
-## Creating documentation
-We created the documentation in the form of both the readme and the informational notations with in the code. Both of these were done througout the project, changing and being updated as the project was being completed.
+### Article Recommendation Utility
 
-## Creating the presentation
-The presentation was done mostly during the final days of the project to allow us as much time as possible for development and testing prior to developing a script and slides.
+This utility uses the parameters provided by the user to recommend a group of articles that the user may be interested in based on their querry.
+
+### Article Translation Utility
+
+This utility defines the number of articles the user would like to translate, then determines the language of the articles, and translates those that are  not already in English. First by detecting the language of the article, then applying the appropriate translation to the title and content.
+
+### Display Articles Utility
+
+This utility passes in a dictionary list of articles and displays and uses a loop to display each of them in a formatted list. Article information includes:   article titles, article descriptions, article URLs, article content, article sources, published dates, authors, images, and keywords.
+### Sentiment and Popularity
+
+This utility extracts article sentiment and/or popularity information from the API and uses it to filter those articles that have higher scores to the top of the display list.
 
 ## Installation
 
@@ -90,13 +96,26 @@ This application run on PC or Mac.
 
 ## Issues Encountered
 
-### Issue 1
+### Choosing a Translator 
+
+We had a few false starts with translators. These are often hard to choose because it is difficult to find high quality translators that you can trust are accurately translating the sample language. 
 
 ### Resolution
+
+We consulted our tutors and profassor, did searches and after examination and testing of several options we decided on the Microsoft Translator API. We selected Deep Tranlator (PyPi) initially but found it to not meet our needs once we started. Simon recommended AYA as a solution but we found it also did not meet our needs and  we could not find any API documentation and we noted that it appeared to not be ready for general use yet.
 
 ### Issue 2
 
-### Resolution
+
+### Resolution 2
+
+## Wish List
+
+What wouls we do if we had more time?
+
+ - Translate into more languages
+ - add more news APIs to improve coverage
+
 
 
 ## Additional Help and Resources
@@ -115,6 +134,8 @@ This application run on PC or Mac.
   - Assisted with general debugging of Python code
 
 ## How We Chose This topic
+
+We asked AI of course! The group read the recommendations in the assignment details and most of us either were not interested in them, or had already covered a similar topic in a previous assignment/project. We then fed the assignment into Copilot and asked for more suggestions. We all all looked at the list and shared our choices.  Most people agreed on two or three, we then discussed them with our own ideas to massage them into more time-appropriate ideas and brainstormed how to mske sure our choice would meet the requirements of the group project. By this time were down to one topic, which we were satisfied with.
 
 <br />
 <br />
