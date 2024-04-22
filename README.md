@@ -32,7 +32,6 @@ This is the activity flow we envision:
 4. Show a selection of articles with brief summaries
 5. Remind the user they are able to select and read any article of their choice
 
-
 ## Methodology
 
 This is how we solved the problem:
@@ -49,7 +48,7 @@ This is the main utility, is to interface with the user and unite the other util
 
 This utility asks the user to input the country, language, keyword and dates of the articles they are interested in viewing.
 
-### Article Import Utility 
+### Article Import Utility
 
 The purpose of this utility is to fetch article data from the API, including headlines, top headlines, publication date, number of articles, language, and country passing these back to the AI Enhanced News Search Utility. Here we used the parameters provided by the user to pull the correct data creating a list of articles for each country and language.
 
@@ -64,20 +63,26 @@ This utility defines the number of articles the user would like to translate, th
 ### Display Articles Utility
 
 This utility passes in a dictionary list of articles and displays and uses a loop to display each of them in a formatted list. Article information includes:   article titles, article descriptions, article URLs, article content, article sources, published dates, authors, images, and keywords.
+
 ### Sentiment and Popularity
 
 This utility extracts article sentiment and/or popularity information from the API and uses it to filter those articles that have higher scores to the top of the display list.
 
-## Installation
+## Running the Application
 
-### Create New Python Environment
+This application run on PC or Mac.
+
+### Installation
+
+#### Create New Python Environment
 
 ```text
 conda create --name Project3 python=3.12
 conda activate Project3
 ```
 
-### Install Packages
+#### Install Packages
+
 | Package | Conda Install | PIP Install |
 | ----------- | ----------- | ----------- |
 | Jupyter Lab               | `conda install -c conda-forge jupyterlab` | `pip install jupyterlab` |
@@ -86,19 +91,18 @@ conda activate Project3
 | Pandas                    | `conda install pandas`                    | `pip install pandas` |
 | Gradio                    | `conda install conda-forge::gradio`       | `pip install gradio`|
 | Google Language Detection | `conda install conda-forge::langdetect`   | `pip install langdetect` |
-| Hugging Face Transformers | `conda install conda-forge::transformers`<br />`conda install conda-forge::sentence-transformers`<br />  | `pip install transformers`<br />`pip install sentence-transformers`<br />`pip install transformers sentencepiece`|
+| spaCy                     | `conda install conda-forge::spacy`        | `pip install -U pip setuptools wheel`<br />`pip install -U spacy` |
+| Hugging Face Transformers | `conda install conda-forge::transformers`<br />`conda install conda-forge::sentence-transformers`<br />`conda install conda-forge::sentencepiece `  | `pip install transformers`<br />`pip install sentence-transformers`<br />`pip install transformers sentencepiece`|
 
-## Running the Application
-
-This application run on PC or Mac.
+#### Execution
 
 1. Open the Jupyter Noteook: main.ipynb
 
 ## Issues Encountered
 
-### Choosing a Translator 
+### Choosing a Translator
 
-We had a few false starts with translators. These are often hard to choose because it is difficult to find high quality translators that you can trust are accurately translating the sample language. 
+We had a few false starts with translators. These are often hard to choose because it is difficult to find high quality translators that you can trust are accurately translating the sample language.
 
 ### Resolution
 
@@ -106,17 +110,14 @@ We consulted our tutors and profassor, did searches and after examination and te
 
 ### Issue 2
 
-
 ### Resolution 2
 
 ## Wish List
 
 What wouls we do if we had more time?
 
- - Translate into more languages
- - add more news APIs to improve coverage
-
-
+- Translate into more languages
+- add more news APIs to improve coverage
 
 ## Additional Help and Resources
 
@@ -133,11 +134,12 @@ What wouls we do if we had more time?
   - Provided recommendations for Gradio interface implementation
   - Assisted with general debugging of Python code
 
-### How We Chose This topic
+## How We Chose This topic
 
 We asked AI of course! The group read the recommendations in the assignment details and most of us either were not interested in them, or had already covered a similar topic in a previous assignment/project. We then fed the assignment into Copilot and asked for more suggestions. We all all looked at the list and shared our choices.  Most people agreed on two or three, we then discussed them with our own ideas to massage them into more time-appropriate ideas and brainstormed how to mske sure our choice would meet the requirements of the group project. By this time were down to one topic, which we were satisfied with.
 
-### Ethics
+## Ethics
+
 The main ethic issue with this program as we see it, involves the quality of the news sources included in the API we have chosen if the news is poor quality, is not factual or is outdated it could be a problem. Spreading old, inaccurate or untrue information could cause problems for the user if they act on such information.  It may be necessary to add a disclaimer or warning to the user reminding them that not everything they read or find on the internet ot news media is true.
 
 <br />
@@ -148,6 +150,7 @@ The main ethic issue with this program as we see it, involves the quality of the
    __________________________________________________________________________
    
 ## Assignment Details
+
 For the Final Project, you will work with your group to collaboratively solve or analyze a problem using advanced ML methodologies. In your solution, you will incorporate transformer models, natural language processing (NLP) techniques, and other tools acquired throughout the course, in addition to at least one new technology that we haven’t covered together.
 
 # Here are the specific requirements
@@ -174,8 +177,8 @@ For the Final Project, you will work with your group to collaboratively solve or
     - PyTorch
     - langdetect
 
-  
 # For this project, you can focus your efforts within a specific industry, as detailed in the following examples
+
 Finance:
 
 - Build a customer service chatbot for a financial firm that analyzes a user’s request and makes customized recommendations in one or more languages.
@@ -192,9 +195,9 @@ Healthcare:
 
 We’ve only specified healthcare and finance, but any industry can benefit from applying NLP, transformers, or OpenAI technologies. Consider preparing a data deep dive or infrastructure review that shows ML in the context of what we’ve already learned.
 
--	Develop an integrated AI model that accurately detects and filters out spam messages.
--	Use NLP to analyze social media data or customer reviews to understand user sentiment about a product, service, or issue.
--	Develop a transformer model that translates between two or more languages of your choice.
+- Develop an integrated AI model that accurately detects and filters out spam messages.
+- Use NLP to analyze social media data or customer reviews to understand user sentiment about a product, service, or issue.
+- Develop a transformer model that translates between two or more languages of your choice.
 
 # Working with Your Group
 
