@@ -128,10 +128,7 @@ We consulted our tutors and profassor, did searches and after examination and te
 ### Sentiment Analysis Implementation
 We had problems with faetching the sentiment analtsis from the worl news API.  They were providing some type of numerical analysis, we tried to turn it into some sort of text but could not achieve this after 15+ hours.
 ### Resolution 
-Instead we used the Spacy natural Language processor to give us small summaries based on the text of each article.
-
-
-
+Instead we used the spaCy natural language processor to give us small summaries based on the text of each article.
 
 
 ## Additional Help and Resources
@@ -148,7 +145,6 @@ Instead we used the Spacy natural Language processor to give us small summaries 
 - ChatGPT
   - Provided recommendations for Gradio interface implementation
   - Assisted with general debugging of Python code
-
 
 
 <br />
