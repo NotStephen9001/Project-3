@@ -107,9 +107,10 @@ Open the Jupyter Noteook: main.ipynb
 What would we do if we had more time?
 
 1. Utilize AI to categorize, summarize, and present trending topics from news articles around the world.
-2. Categorize results displayed into recent and older articles.
-3. Additional news APIs to provide more coverage.
-4. Additional languages for translation.
+2. Additional fomatting of results for ease of readability.
+3. Categorize results displayed into recent and older articles.
+4. Additional news APIs to provide more coverage.
+5. Additional languages for translation.
 
 ## Problems Encountered
 
