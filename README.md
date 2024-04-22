@@ -73,7 +73,7 @@ This utility extracts article sentiment and/or popularity information from the A
 This application run on PC or Mac.
 
 ### Installation
-
+ 
 #### Create New Python Environment
 
 ```text
