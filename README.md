@@ -12,6 +12,10 @@
 
 Please see the final section of this readme for assignment details.
 
+## How We Chose This topic
+
+We asked AI of course! The group read the recommendations in the assignment details and most of us either were not interested in them, or had already covered a similar topic in a previous assignment/project. We then fed the assignment into Copilot and asked for more suggestions. We all all looked at the list and shared our choices.  Most people agreed on two or three, we then discussed them with our own ideas to massage them into more time-appropriate ideas and brainstormed how to mske sure our choice would meet the requirements of the group project. By this time were down to one topic, which we were satisfied with.
+
 ## Goal
 
 Our goal in this project is to offer a more user-friendly option to access worldwide news.
@@ -98,7 +102,20 @@ conda activate Project3
 
 Open the Jupyter Noteook: main.ipynb
 
-## Issues Encountered
+## Next Steps and Future Considerations
+
+What would we do if we had more time?
+
+1. Utilize AI to categorize, summarize, and present trending topics from news articles around the world.
+2. Categorize results displayed into recent and older articles.
+3. Additional news APIs 
+4. Additional languages for translation.
+
+## Problems Encountered
+
+### Ethics Questions
+
+The main ethic issue with this program as we see it, involves the quality of the news sources included in the API we have chosen if the news is poor quality, is not factual or is outdated it could be a problem. Spreading old, inaccurate or untrue information could cause problems for the user if they act on such information.  It may be necessary to add a disclaimer or warning to the user reminding them that not everything they read or find on the internet ot news media is true.
 
 ### Choosing a Translator
 
@@ -108,18 +125,15 @@ We had a few false starts with translators. These are often hard to choose becau
 
 We consulted our tutors and profassor, did searches and after examination and testing of several options we decided on the Microsoft Translator API. We selected Deep Tranlator (PyPi) initially but found it to not meet our needs once we started. Simon recommended AYA as a solution but we found it also did not meet our needs and  we could not find any API documentation and we noted that it appeared to not be ready for general use yet.
 
-### Issue 2
+### Sentiment Analysis Implementation
+
+
 
 ### Resolution 2
 
-## Next Steps and Future Considerations
 
-What would we do if we had more time?
 
-1. Utilize AI to categorize, summarize, and present trending topics from news articles around the world.
-2. Categorize results displayed into recent and older articles.
-3. Additional news APIs 
-4. Additional languages for translation.
+
 
 ## Additional Help and Resources
 
@@ -136,13 +150,7 @@ What would we do if we had more time?
   - Provided recommendations for Gradio interface implementation
   - Assisted with general debugging of Python code
 
-## How We Chose This topic
 
-We asked AI of course! The group read the recommendations in the assignment details and most of us either were not interested in them, or had already covered a similar topic in a previous assignment/project. We then fed the assignment into Copilot and asked for more suggestions. We all all looked at the list and shared our choices.  Most people agreed on two or three, we then discussed them with our own ideas to massage them into more time-appropriate ideas and brainstormed how to mske sure our choice would meet the requirements of the group project. By this time were down to one topic, which we were satisfied with.
-
-## Ethics
-
-The main ethic issue with this program as we see it, involves the quality of the news sources included in the API we have chosen if the news is poor quality, is not factual or is outdated it could be a problem. Spreading old, inaccurate or untrue information could cause problems for the user if they act on such information.  It may be necessary to add a disclaimer or warning to the user reminding them that not everything they read or find on the internet ot news media is true.
 
 <br />
 <br />
