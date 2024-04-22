@@ -108,7 +108,7 @@ What would we do if we had more time?
 
 1. Utilize AI to categorize, summarize, and present trending topics from news articles around the world.
 2. Categorize results displayed into recent and older articles.
-3. Additional news APIs 
+3. Additional news APIs to provide more coverage.
 4. Additional languages for translation.
 
 ## Problems Encountered
@@ -127,6 +127,7 @@ We consulted our tutors and professor, did searches and after examination and te
 
 ### Sentiment Analysis Implementation
 We had problems with faetching the sentiment analtsis from the worl news API.  They were providing some type of numerical analysis, we tried to turn it into some sort of text but could not achieve this after 15+ hours.
+
 ### Resolution 
 Instead we used the spaCy natural language processor to give us small summaries based on the text of each article.
 
