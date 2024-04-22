@@ -133,7 +133,7 @@ What wouls we do if we had more time?
   - Provided recommendations for Gradio interface implementation
   - Assisted with general debugging of Python code
 
-## How We Chose This topic
+### How We Chose This topic
 
 We asked AI of course! The group read the recommendations in the assignment details and most of us either were not interested in them, or had already covered a similar topic in a previous assignment/project. We then fed the assignment into Copilot and asked for more suggestions. We all all looked at the list and shared our choices.  Most people agreed on two or three, we then discussed them with our own ideas to massage them into more time-appropriate ideas and brainstormed how to mske sure our choice would meet the requirements of the group project. By this time were down to one topic, which we were satisfied with.
 
