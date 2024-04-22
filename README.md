@@ -137,6 +137,9 @@ What wouls we do if we had more time?
 
 We asked AI of course! The group read the recommendations in the assignment details and most of us either were not interested in them, or had already covered a similar topic in a previous assignment/project. We then fed the assignment into Copilot and asked for more suggestions. We all all looked at the list and shared our choices.  Most people agreed on two or three, we then discussed them with our own ideas to massage them into more time-appropriate ideas and brainstormed how to mske sure our choice would meet the requirements of the group project. By this time were down to one topic, which we were satisfied with.
 
+### Ethics
+The main ethic issue with this program as we see it, involves the quality of the news sources included in the API we have chosen if the news is poor quality, is not factual or is outdated it could be a problem. Spreading old, inaccurate or untrue information could cause problems for the user if they act on such information.  It may be necessary to add a disclaimer or warning to the user reminding them that not everything they read or find on the internet ot news media is true.
+
 <br />
 <br />
 <br />
