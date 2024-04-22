@@ -30,8 +30,8 @@ def TranslateArticle(articles, languageCode, articleNumber):
     print("Translating Article...")
 
     #if LanguageCode is None, detect the language of the article
-    if languageCode == None or languageCode == "" or languageCode == "None":
-        languageCode = detect(articles[articleNumber - 1]['title'])
+    #if languageCode == None or languageCode == "" or languageCode == "None":
+    languageCode = detect(articles[articleNumber - 1]['content'])
         
     print("Detected Language: " + languageCode)
     
@@ -74,8 +74,11 @@ def TranslateArticle(articles, languageCode, articleNumber):
 
     else:
         print("Article is already in English")
-        translated_article = article
-    
+        
+        #Put the returned article into a list
+        translated_article = []
+        translated_article.append(article)
+   
 
     
     #Return the translated article as a dictionary
@@ -86,14 +89,46 @@ def TranslateArticleText(inputText, languageCode, tokenizer, model):
      
     #If input text is None change it to an empty string
     if inputText != None:
-      # Translate the article part to English
+        # Translate the article part to English
         input_text = inputText
         encoded_text = tokenizer(input_text, return_tensors="pt")
 
-        output_ids = model.generate(**encoded_text, forced_bos_token_id=tokenizer.lang_code_to_id["en_XX"])
+        #Break the inputText into 1024 token chunks and loop through each chunk
+        #to translate the entire inputText
+        #The reassmble the chunks into the translated text
+        #This is necessary because the model has a limit of 1024 tokens
+        #for each translation
 
-        # Retrieve the text from the special characters.
-        translated_text = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+        #Get the number of chunks
+        num_chunks = len(encoded_text.input_ids[0]) // 1024
+        if len(encoded_text.input_ids[0]) % 1024 != 0:
+            num_chunks += 1
+
+        #Initialize the translated text
+        translated_text = ""
+
+        #Loop through each chunk and translate it
+        for i in range(num_chunks):
+            #Get the start and end token indices for the chunk
+            start = i * 1024
+            end = (i + 1) * 1024
+            if end > len(encoded_text.input_ids[0]):
+                end = len(encoded_text.input_ids[0])
+
+            #Get the chunk of text
+            chunk = input_text[start:end]
+
+            #Encode the chunk
+            encoded_chunk = tokenizer(chunk, return_tensors="pt")
+
+            #Translate the chunk
+            output_ids = model.generate(**encoded_chunk, forced_bos_token_id=tokenizer.lang_code_to_id["en_XX"])
+
+            #Retrieve the text from the special characters.
+            translated_chunk = tokenizer.decode(output_ids[0], skip_special_tokens=True)
+
+            #Add the translated chunk to the translated text
+            translated_text += translated_chunk
     else:
         translated_text = ""
      

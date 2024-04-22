@@ -2,14 +2,20 @@
 import requests
 import os
 import sys
+import worldnewsapi
 
+from datetime import datetime, timedelta
 from transformers import pipeline, AutoTokenizer
 from langdetect import detect
 from dotenv import load_dotenv
 #from newsapi import NewsApiClient
 
-def get_article_data(country = None, language = None, query = None):
+
+def get_article_data(country = None, language = None, query = None, time_frame = 7):
     load_dotenv()
+
+    # Get the earliest publish date
+    earliest_publish_date = datetime.now() - timedelta(days=time_frame)
 
     if query == None or query == "None" or query == "":
         query = "News"
@@ -29,6 +35,8 @@ def get_article_data(country = None, language = None, query = None):
         params['source-countries'] = country
     if language and language != '':
         params['language'] = language
+    if earliest_publish_date:
+        params['earliest-publish-date'] = earliest_publish_date
 
     print(params)
 
@@ -36,7 +44,7 @@ def get_article_data(country = None, language = None, query = None):
         'x-api-key': wrld_news_api_key
     }
 
-    response = requests.get(url, headers=headers, params=params)
+    response = requests.get(url, headers=headers, params=params, timeout=90)
 
     if response.status_code == 200:
         return response.json()
