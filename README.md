@@ -176,8 +176,8 @@ For the Final Project, you will work with your group to collaboratively solve or
     - Other OpenAI capabilities, including:
         - Text-to-speech
         - GPT-4 with vision (GPT-4V)
-    - PyTorch
-    - langdetect
+    - [x] PyTorch
+    - [x] langdetect
 
 # For this project, you can focus your efforts within a specific industry, as detailed in the following examples
 
