@@ -115,7 +115,7 @@ What would we do if we had more time?
 
 ### Ethics Questions
 
-The main ethic issue with this program as we see it, involves the quality of the news sources included in the API we have chosen if the news is poor quality, is not factual or is outdated it could be a problem. Spreading old, inaccurate or untrue information could cause problems for the user if they act on such information.  It may be necessary to add a disclaimer or warning to the user reminding them that not everything they read or find on the internet ot news media is true.
+The main ethical issue with this program as we see it, involves the quality of the news sources included in the API we have chosen. If the news is poor quality, is not factual or is outdated it could be a problem. Spreading old, inaccurate or untrue information could cause problems for the user if they act on such information.  It may be necessary to add a disclaimer or warning to the user reminding them that not everything they read or find on the internet ot news media is true.
 
 ### Choosing a Translator
 
@@ -123,7 +123,7 @@ We had a few false starts with translators. These are often hard to choose becau
 
 ### Resolution
 
-We consulted our tutors and profassor, did searches and after examination and testing of several options we decided on the Microsoft Translator API. We selected Deep Tranlator (PyPi) initially but found it to not meet our needs once we started. Simon recommended AYA as a solution but we found it also did not meet our needs and  we could not find any API documentation and we noted that it appeared to not be ready for general use yet.
+We consulted our tutors and professor, did searches and after examination and testing of several options we decided on the Microsoft Translator API. We selected Deep Tranlator (PyPi) initially but found it to not meet our needs once we started. Simon recommended AYA as a solution but we could not find any API documentation and we noted that it appeared to not be ready for general use yet.
 
 ### Sentiment Analysis Implementation
 We had problems with faetching the sentiment analtsis from the worl news API.  They were providing some type of numerical analysis, we tried to turn it into some sort of text but could not achieve this after 15+ hours.
